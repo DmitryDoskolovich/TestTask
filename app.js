@@ -65,14 +65,3 @@ submitForm.addEventListener("submit", function (event) {
     })
         .catch(error => console.error("Fetch error", error));
 })
-
-
-
-
-
-
-/* TODO:
-    !!!выделять поле при заполнении инпута
-
-    let cred = '{ "email": "user@example.com", "password": "mercdev" }';
-*/
