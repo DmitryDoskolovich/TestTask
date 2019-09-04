@@ -1,7 +1,4 @@
-const submitForm = document.querySelector("#authorizationFormId");
-
-const defaultContent =
-  '<form class="authorization-form" id="authorizationFormId"><h3>Log In</h3><input class="input-element" id="emailId" name="email" type="email" placeholder="E-Mail"><input class="input-element" id="passwordId" name="password" type="password" placeholder="Password"><p class="input-element error-message" id="errorMsg" hidden>E-Mail or password is incorrect</p><div id="btnDiv"><input class="loginBtn" id="inputLoginId" type="submit" name="submit" value="Login"></div></form>';
+const submitForm = document.querySelector(".authorization-form");
 
 const url = "https://us-central1-mercdev-academy.cloudfunctions.net/login";
 
@@ -15,12 +12,15 @@ function getPassword() {
 
 function renderContent(name, photoURL) {
   document.querySelector(
-    "#authorizationFormId"
-  ).innerHTML = `<img class="photo" src=${photoURL}><p>${name}</p><div id="btnDiv"><input class="loginBtn" id="inputLogoutId" type="submit" value="Logout"></input></div>`;
+    ".authorization-form"
+  ).innerHTML = `<img class="authorization-form__photo authorization-form__photo_position" src=${photoURL}><p class="authorization-form__photo-text authorization-form__photo-text_position">${name}</p><div class="authorization-form__button-container" id="btnDiv"><input class="authorization-form__button authorization-form__button_logout authorization-form__button_position" id="inputLogoutId" type="submit" value="Logout"></input></div>`;
 }
 
-function renderStartContent(content) {
-  document.querySelector("#authorizationFormId").innerHTML = content;
+function renderStartContent() {
+  document.querySelector(".authorization-form").innerHTML = "";
+  var temp = document.querySelector("#template-id");
+  var clon = temp.content.cloneNode(true);
+  document.querySelector(".authorization-form").appendChild(clon);
 }
 
 function renderError(value) {
@@ -58,7 +58,7 @@ submitForm.addEventListener("submit", function(event) {
           document
             .querySelector("#inputLogoutId")
             .addEventListener("click", function() {
-              renderStartContent(defaultContent);
+              renderStartContent();
             });
         });
       }

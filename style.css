@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Gotham;
+  src: url(GothamPro-Medium.woff2);
+}
+
 body {
   background-image: url(images/background@2x.png);
   background-size: cover;
@@ -8,32 +13,34 @@ body {
   margin: auto;
 }
 
-.container {
+.authorization-block {
   background-color: #ffffff;
   border: none;
   border-radius: 8px;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
-  display: block;
-  margin: auto;
   width: 600px;
   height: auto;
 }
 
-.container input {
+.authorization-block_position {
   display: block;
+  margin: auto;
 }
 
-.container h3 {
+.authorization-form__h3 {
   font-size: 24px;
   font-weight: bold;
   opacity: 0.8;
+}
+
+.authorization-form__h3_position {
   margin: 0px auto 0px auto;
   padding-top: 48px;
   padding-bottom: 48px;
   text-align: center;
 }
 
-.input-element {
+.authorization-form__input {
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
@@ -44,28 +51,45 @@ body {
   line-height: normal;
   letter-spacing: normal;
   opacity: 0.8;
-  margin: 0px auto 32px auto;
   height: 48px;
   width: 504px;
-  padding-left: 16px;
 }
 
-.error-message {
+.authorization-form__input_position {
+  display: block;
+  padding-left: 16px;
+  margin: 0px auto 32px auto;
+}
+
+.authorization-form__error-message {
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  opacity: 0.8;
+  padding-left: 16px;
   background-color: rgba(237, 65, 89, 0.25);
   font-size: 14px;
   color: #ed4159;
   height: auto;
   width: 503px;
+}
+
+.authorization-form__error-message_position {
+  margin: 0px auto 32px auto;
   text-align: left;
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
-#btnDiv {
+.authorization-form__button-container {
   padding-bottom: 1px;
 }
 
-.loginBtn {
+.authorization-form__button {
   border: none;
   border-radius: 100px;
   background-color: #ed4159;
@@ -77,18 +101,22 @@ body {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  margin: 48px auto 60px auto;
-  padding: 17px 56px 17px 56px;
 }
 
-.loginBtn:hover {
+.authorization-form__button:hover {
   box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
   background-color: #ffffff;
   color: #ed4159;
   font-size: 14px;
 }
 
-#inputLogoutId {
+.authorization-form__button_position {
+  display: block;
+  margin: 48px auto 60px auto;
+  padding: 17px 56px 17px 56px;
+}
+
+.authorization-form__button_logout {
   margin: 56px auto 60px auto;
 }
 
@@ -101,75 +129,88 @@ input.form-control {
   text-align: center;
 }
 
-.logo-img {
+.logo__img {
   height: 69px;
   width: 315px;
   padding-right: 15px;
 }
 
-.photo {
+.authorization-form__photo {
   width: 128px;
   height: 128px;
+}
+
+.authorization-form__photo_position {
   padding: 48px 236px 40px 236px;
 }
 
-p {
+.authorization-form__photo-text {
   font-size: 28px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 0.23px;
-  margin: auto;
   opacity: 0.8;
+}
+
+.authorization-form__photo-text_position {
+  margin: auto;
   text-align: center;
 }
 
 @media screen and (max-width: 615px) {
-  .container {
-    width: 288px;
-  }
-
-  .container h3 {
-    font-size: 20px;
-    padding: 32px;
-  }
-
   .logo {
     margin: 43px auto 37px auto;
   }
 
-  .logo-img {
+  .logo__img {
     height: 40px;
     width: 182px;
     padding-right: 4px;
   }
 
-  .input-element {
+  .authorization-block {
+    width: 288px;
+  }
+
+  .authorization-form__h3 {
+    font-size: 20px;
+  }
+
+  .authorization-form__h3_position {
+    padding: 32px;
+  }
+
+  .authorization-form__input {
     margin: 0px auto 24px auto;
     height: 46px;
     width: 240px;
   }
 
-  .error-message {
-    height: auto;
+  .authorization-form__error-message {
+    margin: 0px auto 24px auto;
+    width: 240px;
   }
 
-  #inputLogoutId {
+ .authorization-form__button_logout {
     margin: 40px auto 48px auto;
   }
 
-  .loginBtn {
+  .authorization-form__button {
     margin: 40px auto 48px auto;
   }
 
-  .photo {
+  .authorization-form__photo {
     width: 86px;
     height: 86px;
+  }
+
+  .authorization-form__photo_position {
     padding: 32px 101px 24px 101px;
   }
 
-  p {
+  .authorization-form__photo-text {
     font-size: 18px;
     letter-spacing: 0.15px;
   }
