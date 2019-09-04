@@ -11,28 +11,24 @@
     <title>Doskolovich-Romanov Dmitry</title>
   </head>
 
-  <body>
+  <body class="authorization-page">
     <div class="logo">
-      <img class="logo__img" src="images/logo.svg" />
+      <img class="logo__img" src="resources/images/logo.svg" />
     </div>
-    <div
-      class="authorization-block authorization-block_position"
-      id="containerId"
-    >
-      <form class="authorization-form" id="authorizationFormId">
+    <div class="authorization-block authorization-block_position">
+      <form class="authorization-form">
         <h3 class="authorization-form__h3 authorization-form__h3_position">
           Log In
         </h3>
         <input
-          class="authorization-form__input authorization-form__input_position"
-          id="emailId"
+          class="authorization-form__input authorization-form__input_email
+           authorization-form__input_position"
           name="email"
           type="email"
           placeholder="E-Mail"
         />
         <input
-          class="authorization-form__input authorization-form__input_position"
-          id="passwordId"
+          class="authorization-form__input authorization-form__input_password authorization-form__input_position"
           name="password"
           type="password"
           placeholder="Password"
@@ -44,10 +40,9 @@
         >
           E-Mail or password is incorrect
         </p>
-        <div class="authorization-form__button-container" id="btnDiv">
+        <div class="authorization-form__button-container">
           <input
-            class="authorization-form__button authorization-form__button_login authorization-form__button_position"
-            id="inputLoginId"
+            class="authorization-form__button authorization-form__button_login authorization-form__button_login_position"
             type="submit"
             name="submit"
             value="Login"
@@ -55,42 +50,47 @@
         </div>
       </form>
     </div>
-    <script src="app.js"></script>
+    <template class="default-content-template">
+            <h3 class="authorization-form__h3 authorization-form__h3_position">
+              Log In
+            </h3>
+            <input
+              class="authorization-form__input authorization-form__input_email
+                 authorization-form__input_position"
+              name="email"
+              type="email"
+              placeholder="E-Mail"
+            />
+            <input
+              class="authorization-form__input authorization-form__input_password authorization-form__input_position"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <p
+              class="authorization-form__error-message authorization-form__error-message_position"
+              id="errorMsg"
+              hidden
+            >
+              E-Mail or password is incorrect
+            </p>
+            <div class="authorization-form__button-container">
+              <input
+                class="authorization-form__button authorization-form__button_login authorization-form__button_login_position"
+                type="submit"
+                name="submit"
+                value="Login"
+              />
+            </div>
+          </template>
+          
+          <template class="authorization-form-login-successful-template">
+            <img class="authorization-form__photo authorization-form__photo_position" src="">
+            <p class="authorization-form__photo-text authorization-form__photo-text_position"></p>
+            <div class="authorization-form__button-container">
+                <input class="authorization-form__button authorization-form__button_logout authorization-form__button_logout_position" type="submit" value="Logout"></input>
+            </div>
+          </template>
+    <script src="main.js"></script>
   </body>
-
-  <template id="template-id">
-    <h3 class="authorization-form__h3 authorization-form__h3_position">
-      Log In
-    </h3>
-    <input
-      class="authorization-form__input authorization-form__input_position"
-      id="emailId"
-      name="email"
-      type="email"
-      placeholder="E-Mail"
-    />
-    <input
-      class="authorization-form__input authorization-form__input_position"
-      id="passwordId"
-      name="password"
-      type="password"
-      placeholder="Password"
-    />
-    <p
-      class="authorization-form__error-message authorization-form__error-message_position"
-      id="errorMsg"
-      hidden
-    >
-      E-Mail or password is incorrect
-    </p>
-    <div class="authorization-form__button-container" id="btnDiv">
-      <input
-        class="authorization-form__button authorization-form__button_position"
-        id="inputLoginId"
-        type="submit"
-        name="submit"
-        value="Login"
-      />
-    </div>
-  </template>
 </html>
