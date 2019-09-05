@@ -28,6 +28,17 @@
   margin: auto;
 }
 
+.logo {
+  margin: 142px auto 125px auto;
+  text-align: center;
+}
+
+.logo__img {
+  height: 69px;
+  width: 315px;
+  padding-right: 15px;
+}
+
 .authorization-form__h3 {
   color: #262626;
   font-size: 24px;
@@ -46,6 +57,7 @@
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
+  display: block;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -58,7 +70,6 @@
 }
 
 .authorization-form__input_position {
-  display: block;
   padding-left: 16px;
   margin: 0px auto 32px auto;
 }
@@ -74,6 +85,7 @@
   opacity: 0.8;
   padding-left: 16px;
   background-color: rgba(237, 65, 89, 0.25);
+  text-align: left;
   font-size: 14px;
   color: #ed4159;
   height: auto;
@@ -82,7 +94,6 @@
 
 .authorization-form__error-message_position {
   margin: 0px auto 32px auto;
-  text-align: left;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -97,6 +108,7 @@
   background-color: #ed4159;
   box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
   color: #ffffff;
+  display: block;
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -113,30 +125,13 @@
 }
 
 .authorization-form__button_login_position {
-  display: block;
   margin: 48px auto 60px auto;
   padding: 17px 56px 17px 56px;
 }
 
 .authorization-form__button_logout_position {
-  display: block;
   margin: 56px auto 60px auto;
   padding: 17px 56px 17px 56px;
-}
-
-input.form-control {
-  padding-left: 30px;
-}
-
-.logo {
-  margin: 142px auto 125px auto;
-  text-align: center;
-}
-
-.logo__img {
-  height: 69px;
-  width: 315px;
-  padding-right: 15px;
 }
 
 .authorization-form__photo {
@@ -187,9 +182,12 @@ input.form-control {
   }
 
   .authorization-form__input {
-    margin: 0px auto 24px auto;
     height: 46px;
     width: 240px;
+  }
+
+  .authorization-form__input_position {
+    margin: 0px auto 24px auto;
   }
 
   .authorization-form__error-message {
