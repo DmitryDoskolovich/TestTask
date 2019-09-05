@@ -19,12 +19,12 @@
   border-radius: 8px;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
   color: #262626;
+  display: block;
   width: 600px;
   height: auto;
 }
 
 .authorization-block_position {
-  display: block;
   margin: auto;
 }
 

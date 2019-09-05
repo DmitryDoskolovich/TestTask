@@ -4,6 +4,11 @@ const url = "https://us-central1-mercdev-academy.cloudfunctions.net/login";
 
 submitForm.addEventListener("submit", function(event) {
   event.preventDefault();
+  mainWorkFlow();
+});
+
+function mainWorkFlow() {
+
   let email = getEmail();
   let password = getPassword();
   let credentials = `{ "email": "${email}", "password": "${password}" }`;
@@ -31,4 +36,4 @@ submitForm.addEventListener("submit", function(event) {
       }
     })
     .catch(error => console.error("Fetch error", error));
-});
+}
